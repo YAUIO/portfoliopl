@@ -10,7 +10,7 @@ body {
 
 .container {
     text-align: center;
-    background: #ffffff;
+    background: #480088;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -42,8 +42,8 @@ p {
 
 .links .button {
     display: block;
-    background: #0073e6;
-    color: white;
+    background: #6e50ff;
+    color: black;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -52,5 +52,5 @@ p {
 }
 
 .links .button:hover {
-    background: #005bb5;
+    background: #8226a2;
 }
