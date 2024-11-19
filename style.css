@@ -2,21 +2,41 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex; /* Enables Flexbox on the body */
+    justify-content: center; /* Centers the container horizontally */
+    align-items: center; /* Centers the container vertically */
+    height: 100vh; /* Makes sure the body takes the full height of the viewport */
     background-size: cover;
-    background: #610e62 url('bg.jpg') no-repeat center;
+    background: rgb(28, 0, 48) url('bg.jpg') no-repeat center;
+}
+
+.overlay {
+    position: absolute; /* Position the overlay over the entire screen */
+    display: flex; /* Enables Flexbox on the body */
+    justify-content: center; /* Centers the container horizontally */
+    align-items: center; /* Centers the container vertically */
+    height: 100vh; /* Makes sure the body takes the full height of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(32, 4, 42, 0.6); /* Semi-transparent dark overlay */
+    z-index: 1; /* Make sure overlay is below the container but on top of the background */
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Ensures full viewport height */
+    justify-content: center; /* Center the content vertically */
+    width: 400px; /* Set the width of the container */
+    height: 400px; /* Set the height equal to the width to create a square */
     text-align: center;
-    background-color: rgb(99, 0, 226, 0.8); /* Optional: Semi-transparent overlay */
+    background-color: rgba(84, 0, 182, 0.8); /* Optional: Semi-transparent overlay */
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 15px; /* Rounded corners */
+    margin-top: 20px; /* Adds margin on top of the container to position it below the text */
+    border: 4px solid #20004f; /* Adds a 4px solid border with color  */
 }
 
 .profile {
@@ -53,5 +73,5 @@ p {
 }
 
 .links .button:hover {
-    background: #8226a2;
+    background: rgba(0, 0, 0, 0.4);
 }
