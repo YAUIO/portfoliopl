@@ -1,77 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primary:#fff;
+    --color-links:rgba(255, 255, 255, 0.75);
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Enables Flexbox on the body */
-    justify-content: center; /* Centers the container horizontally */
-    align-items: center; /* Centers the container vertically */
-    height: 100vh; /* Makes sure the body takes the full height of the viewport */
-    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+    object-fit: cover;
+    margin: auto;
+    overflow-y: hidden;
     background: rgb(28, 0, 48) url('bg.jpg') no-repeat center;
 }
 
-.overlay {
-    position: absolute; /* Position the overlay over the entire screen */
-    display: flex; /* Enables Flexbox on the body */
-    justify-content: center; /* Centers the container horizontally */
-    align-items: center; /* Centers the container vertically */
-    height: 100vh; /* Makes sure the body takes the full height of the viewport */
-    top: 0;
-    left: 0;
+.wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
     width: 100%;
-    background-color: rgba(32, 4, 42, 0.6); /* Semi-transparent dark overlay */
-    z-index: 1; /* Make sure overlay is below the container but on top of the background */
+    background-color: rgba(32, 4, 42, 0.6); 
 }
 
-.container {
+.main__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center the content vertically */
-    width: 400px; /* Set the width of the container */
-    height: 400px; /* Set the height equal to the width to create a square */
+    justify-content: center;
+    width: 400px; 
+    height: 400px; 
     text-align: center;
-    background-color: rgba(84, 0, 182, 0.8); /* Optional: Semi-transparent overlay */
+    background-color: rgba(84, 0, 182, 0.8); 
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 15px; /* Rounded corners */
-    margin-top: 20px; /* Adds margin on top of the container to position it below the text */
-    border: 4px solid #20004f; /* Adds a 4px solid border with color  */
+    border-radius: 15px; 
+    border: 4px solid #20004f;
 }
 
-.profile {
+.main__profile {
     margin-bottom: 20px;
 }
 
-.profile-picture {
+.main__picture {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-h1 {
+h1{
     font-size: 24px;
     margin: 0;
+    color: var(--color-primary);
 }
 
-p {
+.main__subtitle{
+    color: var(--color-primary);
+}
+
+p{
     font-size: 14px;
-    color: #000000;
+    color: var(--color-primary);
     margin: 5px 0 20px;
 }
 
-.links .button {
-    display: block;
-    background: #6e50ff;
-    color: black;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px 0;
-    transition: background 0.3s ease;
+.main__links-block{ 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.links .button:hover {
-    background: rgba(0, 0, 0, 0.4);
+.main__button{
+    color: var(--color-links);
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    background: #6e50ff;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.main__button:hover{
+    background: #4734a8;
+    color: var(--color-primary);
 }

@@ -7,21 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="overlay">
-    <div class="container">
-        <div class="profile">
-            <img src="picture.jpg" alt="Profile Picture" class="profile-picture">
-            <h1>YAUIO</h1>
-            <i>yudek</i>
-            <p>PJATK Student | Developer | ArchLinux4Life</p>
-        </div>
-        <div class="links">
-            <a href="https://github.com/yauio" target="_blank" class="button">GitHub</a>
-            <a href="https://osu.ppy.sh/users/16149779" target="_blank" class="button">osu!profile</a>
-            <a href="https://twitter.com/vyauiov" target="_blank" class="button">Twitter (X)</a>
-            <a href="https://steamcommunity.com/id/artembez" target="_blank" class="button">Steam</a>
-        </div>
-    </div>
+<div class="wrapper">
+    <main class="wrapper__main main">
+        <section class="main__section">
+            <div class="main__container">
+                <div class="main__profile">
+                    <img src="picture.jpg" loading="lazy" alt="Profile Picture" class="main__picture">
+                    <h1 class="main__title">YAUIO</h1>
+                    <span class="main__subtitle">yudek</span>
+                    <p class="main__description">PJATK Student | Developer | ArchLinux4Life</p>
+                </div>
+                <div class="main__links-block">
+                    <button class="main__button" data-url="https://github.com/yauio" type="button"> GitHub</button>
+                    <button class="main__button" data-url="https://osu.ppy.sh/users/16149779" type="button">osu!profile</button>
+                    <button class="main__button" data-url="https://twitter.com/vyauiov" type="button">Twitter (X)</button>
+                    <button class="main__button" data-url="https://steamcommunity.com/id/artembez" type="button">Steam</button>
+                </div>
+            </div>
+        </section>
+    </main>
 </div>
+    <script>
+        document.querySelectorAll('button[data-url]').forEach(button => {
+          button.addEventListener('click', function() {
+            const url = this.getAttribute('data-url');
+            if (url) {
+              window.open(url, '_blank');
+            }
+          });
+        });
+    </script>
 </body>
 </html>
