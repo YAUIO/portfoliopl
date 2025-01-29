@@ -18,25 +18,27 @@
                     <p class="main__description">PJATK Student | Developer | ArchLinux4Life</p>
                 </div>
                 <div class="main__links-block">
-                    <button class="main__button" data-url="https://github.com/yauio" type="button"> GitHub</button>
+                    <div>
+                        <button class="main__div__button" data-url="/portfolio" type="button">Portfolio</button>
+                        <button class="main__div__button" data-url="/games" type="button">Games</button>
+                    </div>
+                    <button class="main__button" data-url="https://github.com/yauio" type="button">GitHub</button>
+                    <button class="main__button" data-url="https://www.linkedin.com/in/artiom-bezkorovainyi-204ab42b3/" type="button">LinkedIn</button>
                     <button class="main__button" data-url="https://ko-fi.com/yauio" type="button">Ko-Fi (support me)</button>
-                    <button class="main__button" data-url="https://osu.ppy.sh/users/16149779" type="button">osu!profile</button>
-                    <button class="main__button" data-url="https://twitter.com/vyauiov" type="button">Twitter (X)</button>
-                    <button class="main__button" data-url="https://steamcommunity.com/id/artembez" type="button">Steam</button>
                 </div>
             </div>
         </section>
     </main>
 </div>
-    <script>
-        document.querySelectorAll('button[data-url]').forEach(button => {
-          button.addEventListener('click', function() {
+<script>
+    document.querySelectorAll('button[data-url]').forEach(button => {
+        button.addEventListener('click', function() {
             const url = this.getAttribute('data-url');
             if (url) {
-              window.open(url, '_blank');
+                window.open(url, '_blank');
             }
-          });
         });
-    </script>
+    });
+</script>
 </body>
 </html>

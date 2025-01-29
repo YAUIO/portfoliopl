@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAUIODEV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <main class="wrapper__main main">
+        <section class="main__section">
+            <div class="main__container">
+                <div class="main__profile">
+                    <h2 class="main__subtitle">yudek</h2>
+                    <p class="main__description">Apex & osu! enjoyer</p>
+                </div>
+                <div class="main__links-block">
+                    <button class="main__button" data-url="https://osu.ppy.sh/users/16149779" type="button">osu!profile</button>
+                    <button class="main__button" data-url="https://steamcommunity.com/id/artembez" type="button">Steam</button>
+                    <button class="main__button" data-url="https://twitter.com/vyauiov" type="button">Twitter (X)</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<script>
+    document.querySelectorAll('button[data-url]').forEach(button => {
+        button.addEventListener('click', function() {
+            const url = this.getAttribute('data-url');
+            if (url) {
+                window.open(url, '_blank');
+            }
+        });
+    });
+</script>
+</body>
+</html>
