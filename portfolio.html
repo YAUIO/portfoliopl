@@ -3,24 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YAUIODEV</title>
+    <title>YAUIODEV | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        .main {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+        .main__title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .bio {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            color: #b0b0b0;
+        }
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .project-card {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            text-align: left;
+        }
+        .project-card:hover {
+            background-color: #292929;
+        }
+        .project-card h2 {
+            margin: 5px 0;
+            font-size: 1.4rem;
+        }
+        .project-card p {
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+    </style>
 </head>
 <body>
 <div class="wrapper">
-    <main class="wrapper__main main">
-        <section class="main__section">
-            <div class="main__container">
-                <div class="main__profile">
-                    <h1 class="main__title">WIP</h1>
-                </div>
+    <main class="main">
+        <h1 class="main__title">YAUIODEV</h1>
+        <p class="bio">Software Developer | Java & C++ Enthusiast</p>
+
+        <section class="portfolio">
+            <div class="project-card" data-url="https://github.com/YAUIO/UTP4">
+                <h2>Library management software</h2>
+                <p>A university project demonstrating advanced Java programming concepts and Swing, JPA utilization.</p>
+                <ul>
+                    <li>Showcases academic experience in Java</li>
+                    <li>Emphasizes object-oriented programming</li>
+                    <li>Involves complex problem-solving and software design</li>
+                </ul>
+                <p>Used: Java, Swing, AWT, Hibernate, JPA, H2, Reflections, Maven, Reflection</p>
+            </div>
+            <div class="project-card" data-url="https://github.com/YAUIO/ApexAutoCut">
+                <h2>Apex Clipper</h2>
+                <p>An automated tool that detects and extracts highlights from Apex Legends gameplay to assist content creators.</p>
+                <ul>
+                    <li>Automates key moment detection in gameplay</li>
+                    <li>Applies video processing techniques</li>
+                    <li>Enhances workflow for gaming content creation</li>
+                </ul>
+                <p>Used: C++, OpenCV, ffmpeg</p>
+            </div>
+            <div class="project-card" data-url="https://github.com/YAUIO/UTP3">
+                <h2>Model data calculation software</h2>
+                <p>A Java Swing software based on Reflections and ScriptEngine usage</p>
+                <ul>
+                    <li>Provides a structured UI for viewing data in tables</li>
+                    <li>Performs calculations on any model correctly marked with @Bind annotation</li>
+                    <li>Supports custom calculations with groovy language</li>
+                </ul>
+                <p>Used: Java, Reflections, ScriptEngine, Swing, Maven</p>
+            </div>
+            <div class="project-card" data-url="https://github.com/YAUIO/TelegramParser">
+                <h2>Telegram log reader (WIP)</h2>
+                <p>A Java Swing program which emulates Telegram UI in some way</p>
+                <ul>
+                    <li>Deserializes json to properly work with the data</li>
+                    <li>Renders readable messages with media</li>
+                </ul>
+                <p>Used: Java, Swing, GSON, Maven, imageio, caprica</p>
             </div>
         </section>
     </main>
 </div>
+
 <script>
-    document.querySelectorAll('button[data-url]').forEach(button => {
-        button.addEventListener('click', function() {
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', function() {
             const url = this.getAttribute('data-url');
             if (url) {
                 window.open(url, '_blank');

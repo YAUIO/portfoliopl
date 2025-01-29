@@ -35,7 +35,11 @@
         button.addEventListener('click', function() {
             const url = this.getAttribute('data-url');
             if (url) {
-                window.open(url, '_blank');
+                if (url.endsWith("portfolio") || url.endsWith("games")) {
+                    window.location.href=url;
+                } else {
+                    window.open(url, '_blank');
+                }
             }
         });
     });
