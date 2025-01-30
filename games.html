@@ -6,6 +6,9 @@
     <title>YAUIODEV | GAMES</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<header>
+    <button class="main__header__button" data-url="/" type="button">Back</button>
+</header>
 <body>
 <div class="wrapper">
     <main class="wrapper__main main">
@@ -25,11 +28,19 @@
     </main>
 </div>
 <script>
-    document.querySelectorAll('button[data-url]').forEach(button => {
+    document.querySelectorAll('.main__button').forEach(button => {
         button.addEventListener('click', function() {
             const url = this.getAttribute('data-url');
             if (url) {
                 window.open(url, '_blank');
+            }
+        });
+    });
+    document.querySelectorAll('.main__header__button').forEach(button => {
+        button.addEventListener('click', function() {
+            const url = this.getAttribute('data-url');
+            if (url) {
+                window.location.href=url;
             }
         });
     });

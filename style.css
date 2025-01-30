@@ -87,6 +87,22 @@ p{
     color: var(--color-primary);
 }
 
+.main__header__button{
+    color: var(--color-links);
+    inline-size: 80px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    background: #6e50ff;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.main__header__button:hover{
+    background: #4734a8;
+    color: var(--color-primary);
+}
+
 .main__div__button{
     color: var(--color-links);
     inline-size: 98px;
