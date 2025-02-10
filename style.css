@@ -5,6 +5,10 @@
     --color-links:rgba(255, 255, 255, 0.75);
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     height: 100vh;
