@@ -19,30 +19,28 @@
                 </div>
                 <div class="main__links-block">
                     <div>
-                        <button class="main__div__button" data-url="/portfolio" type="button">Portfolio</button>
-                        <button class="main__div__button" data-url="/games" type="button">Games</button>
+                        <a href="/portfolio">
+                            <button class="main__div__button" type="button">Portfolio</button>
+                        </a>
+                        <a href="/games">
+                            <button class="main__div__button" type="button">Games</button>
+                        </a>
                     </div>
-                    <button class="main__button" data-url="https://github.com/yauio" type="button">GitHub</button>
-                    <button class="main__button" data-url="https://www.linkedin.com/in/artiom-bezkorovainyi-204ab42b3/" type="button">LinkedIn</button>
-                    <button class="main__button" data-url="https://ko-fi.com/yauio" type="button">Ko-Fi (support me)</button>
+                    <a href="https://github.com/yauio">
+                        <button class="main__button" type="button">GitHub</button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/artiom-bezkorovainyi-204ab42b3/">
+                        <button class="main__button" type="button">LinkedIn
+                        </button>
+                    </a>
+                    <a href="https://ko-fi.com/yauio">
+                        <button class="main__button" type="button">Ko-Fi (support me)
+                    </button>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 </div>
-<script>
-    document.querySelectorAll('button[data-url]').forEach(button => {
-        button.addEventListener('click', function() {
-            const url = this.getAttribute('data-url');
-            if (url) {
-                if (url.endsWith("portfolio") || url.endsWith("games")) {
-                    window.location.href=url;
-                } else {
-                    window.open(url, '_blank');
-                }
-            }
-        });
-    });
-</script>
 </body>
 </html>
